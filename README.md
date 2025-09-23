@@ -1,2 +1,3 @@
 # paulcarlson.fi
-My personal website. Woo
+
+My personal website. Woo. Boo
