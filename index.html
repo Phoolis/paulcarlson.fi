@@ -1,93 +1,136 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Paul Carlson's Homepage</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header style="position: relative;">
-        <h1 id="header-title">Welcome to paulcarlson.fi</h1>
-        <!-- Language selector -->
-        <select id="lang-selector">
-            <option value="en">🇬🇧 EN</option>
-            <option value="fi">🇫🇮 FI</option>
-        </select>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paul Carlson's Homepage</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header style="position: relative">
+      <h1 id="header-title">Welcome to paulcarlson.fi</h1>
+      <!-- Language selector -->
+      <select id="lang-selector">
+        <option value="en">🇬🇧 EN</option>
+        <option value="fi">🇫🇮 FI</option>
+      </select>
     </header>
 
-	
-	<main>
-		<p id="intro-text">This will be Paul's awe-inspiring and stupefyingly advanced website.</p>
+    <main>
+      <p id="intro-text">
+        This will be Paul's awe-inspiring and stupefyingly advanced website.
+      </p>
 
-		<div class="notice" id="notice-text">
-			This site is currently under construction. Please check back later.
-		</div>
+      <div class="notice" id="notice-text">
+        This site is currently under construction. Please check back later.
+      </div>
 
-		<p id="game-text">Meanwhile, you can try a Finnish word-guessing game here:</p>
-		<ul class="links">
-			<li><a id="sanuli-btn" href="http://sanuli.paulcarlson.fi"><i class="fa-solid fa-gamepad"></i> Play Sanuli</a></li>
-		</ul>
+      <p id="game-text">
+        Meanwhile, you can try a Finnish word-guessing game here:
+      </p>
+      <ul class="links">
+        <li>
+          <a id="sanuli-btn" href="http://sanuli.paulcarlson.fi"
+            ><i class="fa-solid fa-gamepad"></i> Play Sanuli</a
+          >
+        </li>
+      </ul>
 
-		<h2 id="connect-title">Connect with me</h2>
-		<ul class="links">
-			<li><a href="https://www.linkedin.com/in/paul-carlson-pc86/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-			<li><a href="https://github.com/Phoolis" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
-		</ul>
-	</main>
+      <h2 id="connect-title">Connect with me</h2>
+      <ul class="links">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/paul-carlson-pc86/"
+            target="_blank"
+            ><i class="fab fa-linkedin"></i> LinkedIn</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/Phoolis" target="_blank"
+            ><i class="fab fa-github"></i> GitHub</a
+          >
+        </li>
+      </ul>
+    </main>
 
-	<footer>
-		<p>&copy; 2025 Paul Carlson</p>
-		<p><a id="status-link" href="https://stats.uptimerobot.com/cPOdsE6Fix" class="status-link">Status page</a></p>
-        <p id="footer-meta" class="meta">Version: v0.1 | Last updated: 22 Sep 2025</p>
-	</footer>
+    <footer>
+      <p>&copy; 2025 Paul Carlson</p>
+      <p>
+        <a
+          id="status-link"
+          href="https://stats.uptimerobot.com/cPOdsE6Fix"
+          class="status-link"
+          >Status page</a
+        >
+      </p>
+      <p id="footer-meta" class="meta">
+        Version: v0.1 | Last updated: 22 Sep 2025
+      </p>
+    </footer>
 
-	<script>
-		const translations = {
-			en: {
-				header: "Welcome to paulcarlson.fi",
-				intro: "This will be Paul's awe-inspiring and stupefyingly advanced website.",
-				notice: "This site is currently under construction. Please check back later.",
-				game: "Meanwhile, you can try a Finnish word-guessing game here:",
-				sanuliBtn: "Play Sanuli",
-				connect: "Connect with me",
-				status: "Status page",
-				footerMeta: "Version: v0.1 | Last updated: 22 Sep 2025"
-			},
-			fi: {
-				header: "Tervetuloa paulcarlson.fi:hin",
-				intro: "Tämä tulee olemaan Paulin hämmästyttävä ja vaikuttavan kehittynyt verkkosivusto.",
-				notice: "Sivusto on tällä hetkellä työn alla. Tarkista myöhemmin uudelleen.",
-				game: "Sillä välin voit kokeilla suomenkielistä sanapeliä:",
-				sanuliBtn: "Pelaa Sanulia",
-				connect: "Ota yhteyttä",
-				status: "Palvelun tila",
-				footerMeta: "Versio: v0.1 | Viimeksi päivitetty: 22. syys 2025"
-			}
-		};
+    <script>
+      const translations = {
+        en: {
+          header: "Welcome to paulcarlson.fi",
+          intro:
+            "This will be Paul's awe-inspiring and stupefyingly advanced website.",
+          notice:
+            "This site is currently under construction. Please check back later.",
+          game: "Meanwhile, you can try a Finnish word-guessing game here:",
+          sanuliBtn: "Play Sanuli",
+          connect: "Connect with me",
+          status: "Status page",
+          footerMeta: "Version: v0.2 | Last updated: 23 Sep 2025",
+        },
+        fi: {
+          header: "Tervetuloa paulcarlson.fi:hin",
+          intro:
+            "Tämä tulee olemaan Paulin hämmästyttävä ja vaikuttavan kehittynyt verkkosivusto.",
+          notice:
+            "Sivusto on tällä hetkellä työn alla. Tarkista myöhemmin uudelleen.",
+          game: "Sillä välin voit kokeilla suomenkielistä sanapeliä:",
+          sanuliBtn: "Pelaa Sanulia",
+          connect: "Ota yhteyttä",
+          status: "Palvelun tila",
+          footerMeta: "Versio: v0.2 | Viimeksi päivitetty: 23. syys 2025",
+        },
+      };
 
-		const selector = document.getElementById('lang-selector');
+      const selector = document.getElementById("lang-selector");
 
-		function updateLanguage(lang) {
-			document.getElementById('header-title').textContent = translations[lang].header;
-			document.getElementById('intro-text').textContent = translations[lang].intro;
-			document.getElementById('notice-text').textContent = translations[lang].notice;
-			document.getElementById('game-text').textContent = translations[lang].game;
-			document.getElementById('sanuli-btn').childNodes[1].textContent = ' ' + translations[lang].sanuliBtn;
-			document.getElementById('connect-title').textContent = translations[lang].connect;
-			document.getElementById('status-link').textContent = translations[lang].status;
-			document.getElementById('footer-meta').textContent = translations[lang].footerMeta;
-		}
+      function updateLanguage(lang) {
+        document.getElementById("header-title").textContent =
+          translations[lang].header;
+        document.getElementById("intro-text").textContent =
+          translations[lang].intro;
+        document.getElementById("notice-text").textContent =
+          translations[lang].notice;
+        document.getElementById("game-text").textContent =
+          translations[lang].game;
+        document.getElementById("sanuli-btn").childNodes[1].textContent =
+          " " + translations[lang].sanuliBtn;
+        document.getElementById("connect-title").textContent =
+          translations[lang].connect;
+        document.getElementById("status-link").textContent =
+          translations[lang].status;
+        document.getElementById("footer-meta").textContent =
+          translations[lang].footerMeta;
+      }
 
-		// default language
-		updateLanguage('en');
+      // default language
+      updateLanguage("en");
 
-		selector.addEventListener('change', (e) => {
-			updateLanguage(e.target.value);
-		});
-	</script>
-</body>
+      selector.addEventListener("change", (e) => {
+        updateLanguage(e.target.value);
+      });
+    </script>
+  </body>
 </html>
-
