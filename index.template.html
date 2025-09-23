@@ -72,7 +72,7 @@
         >
       </p>
       <p id="footer-meta" class="meta">
-        Version: v0.1 | Last updated: 22 Sep 2025
+        Version: __VERSION__ (__HASH__) | Last updated: __DATE__
       </p>
     </footer>
 
@@ -88,7 +88,6 @@
           sanuliBtn: "Play Sanuli",
           connect: "Connect with me",
           status: "Status page",
-          footerMeta: "Version: v0.2 | Last updated: 23 Sep 2025",
         },
         fi: {
           header: "Tervetuloa paulcarlson.fi:hin",
@@ -100,7 +99,6 @@
           sanuliBtn: "Pelaa Sanulia",
           connect: "Ota yhteyttä",
           status: "Palvelun tila",
-          footerMeta: "Versio: v0.2 | Viimeksi päivitetty: 23. syys 2025",
         },
       };
 
@@ -121,8 +119,6 @@
           translations[lang].connect;
         document.getElementById("status-link").textContent =
           translations[lang].status;
-        document.getElementById("footer-meta").textContent =
-          translations[lang].footerMeta;
       }
 
       // default language
