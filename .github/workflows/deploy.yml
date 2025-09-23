@@ -20,3 +20,9 @@ jobs:
             cd /var/www/html
             git fetch --all
             git reset --hard origin/main
+
+            VERSION="v$(git rev-list --count HEAD)"
+            HASH=$(git rev-parse --short HEAD)
+            DATE=$(date +"%d %b %Y")
+
+            sed "s/__VERSION__/$VERSION/; s/__HASH__/$HASH/; s/__DATE__/$DATE/" index.template.html > index.html
