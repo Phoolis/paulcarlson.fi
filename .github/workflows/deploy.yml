@@ -16,7 +16,4 @@ jobs:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
-          script: |
-            cd /var/www/paulcarlson.fi
-            git fetch --all
-            git reset --hard origin/main
+          script: git-pull
