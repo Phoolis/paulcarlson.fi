@@ -23,6 +23,10 @@ jobs:
 
             VERSION="v$(git rev-list --count HEAD)"
             HASH=$(git rev-parse --short HEAD)
+            FULL_HASH=$(git rev-parse HEAD)
             DATE=$(date +"%d %b %Y")
 
-            sed "s/__VERSION__/$VERSION/; s/__HASH__/$HASH/; s/__DATE__/$DATE/" index.template.html > index.html
+            sed "s|__VERSION__|$VERSION|; \
+            s|__HASH__|$HASH|; \
+            s|__HASH_URL__|https://github.com/Phoolis/paulcarlson.fi/commit/$FULL_HASH|; \
+            s|__DATE__|$DATE|" index.template.html > index.html
