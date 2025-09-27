@@ -25,40 +25,50 @@
     </header>
 
     <main>
-      <p id="intro-text">
-        This will be Paul's awe-inspiring and stupefyingly advanced website.
-      </p>
+      <div class="content">
 
-      <div class="notice" id="notice-text">
-        This site is currently under construction. Please check back later.
-      </div>
-
-      <p id="game-text">
-        Meanwhile, you can try a Finnish word-guessing game here:
-      </p>
-      <ul class="links">
-        <li>
-          <a id="sanuli-btn" href="https://sanuli.paulcarlson.fi"
+        <p id="intro-text">
+          This will be Paul's awe-inspiring and stupefyingly advanced website.
+        </p>
+        
+        <div class="notice" id="notice-text">
+          This site is currently under construction. Please check back later.
+        </div>
+        
+        <p id="game-text">
+          Meanwhile, you can try a Finnish word-guessing game here:
+        </p>
+        <ul class="links">
+          <li>
+            <a id="sanuli-btn" href="https://sanuli.paulcarlson.fi"
             ><i class="fa-solid fa-gamepad"></i> Play Sanuli</a
-          >
-        </li>
-      </ul>
-
-      <h2 id="connect-title">Connect with me</h2>
-      <ul class="links">
-        <li>
-          <a
+            >
+          </li>
+        </ul>
+        
+        <h2 id="connect-title">Connect with me</h2>
+        <ul class="links">
+          <li>
+            <a
             href="https://www.linkedin.com/in/paul-carlson-pc86/"
             target="_blank"
             ><i class="fab fa-linkedin"></i> LinkedIn</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/Phoolis" target="_blank"
+            >
+          </li>
+          <li>
+            <a href="https://github.com/Phoolis" target="_blank"
             ><i class="fab fa-github"></i> GitHub</a
-          >
-        </li>
-      </ul>
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar">
+        <h2 id="about-header">About Me</h2>
+        <img src="itsme_paul.jpg" alt="Paul Carlson">
+        <p id="about-text">I’m Paul, a developer interested in backend, web development, and fun side projects.
+        This site is a work in progress, but over time I’ll add projects, experiments, and write-ups here.</p>
+      </div>
     </main>
 
     <footer>
@@ -94,6 +104,8 @@
           sanuliBtn: "Play Sanuli",
           connect: "Connect with me",
           status: "Status page",
+          about: "About Me",
+          aboutText: "I’m Paul, a developer interested in backend, web development, and fun side projects. This site is a work in progress, but over time I’ll add projects, experiments, and write-ups here.",
         },
         fi: {
           header: "Tervetuloa paulcarlson.fi:hin",
@@ -105,6 +117,8 @@
           sanuliBtn: "Pelaa Sanulia",
           connect: "Ota yhteyttä",
           status: "Palvelun tila",
+          about: "Minusta",
+          aboutText: "Olen Paul, kehittäjä, joka on kiinnostunut backendistä, verkkokehityksestä ja hauskoista sivuprojekteista. Tämä sivusto on työn alla, mutta ajan myötä lisään tänne projekteja, kokeiluja ja kirjoituksia.",
         },
       };
 
@@ -125,6 +139,8 @@
           translations[lang].connect;
         document.getElementById("status-link").textContent =
           translations[lang].status;
+        document.getElementById("about-header").textContent = translations[lang].about;
+        document.getElementById("about-text").textContent = translations[lang].aboutText;
       }
 
       // default language
