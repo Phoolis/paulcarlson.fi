@@ -34,7 +34,7 @@ jobs:
 
       - name: Verify build output
         run: |
-          echo "Contents of dist/:"
-          ls -l dist/
+          echo "Contents of build/:"
+          ls -l build/
           echo "\nChecking footer content:"
-          grep -R "Last updated: [0-9]{4}-[0-9]{2}-[0-9]{2}" dist || echo "No match found"
+          grep -R "Last updated: [0-9]{4}-[0-9]{2}-[0-9]{2}" build || echo "No match found"
