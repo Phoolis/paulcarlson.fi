@@ -32,10 +32,10 @@ jobs:
         env:
           VITE_LAST_UPDATED: ${{ env.VITE_LAST_UPDATED }}
 
-      - name: Verify build output
+      - name: Verify build footer date
         run: |
-          echo "Contents of build/:"
-          ls -l build/
-          echo
           echo "Checking footer content:"
-          grep -ER "Last updated: <!-- -->[0-9]{4}-[0-9]{2}-[0-9]{2}" build || echo "No match found"
+          if ! grep -ER "Last updated: <!-- -->[0-9]{4}-[0-9]{2}-[0-9]{2}" build/; then
+            echo "❌ Last updated date not found in build output!"
+            exit 1
+          fi
