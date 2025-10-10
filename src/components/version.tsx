@@ -1,11 +1,11 @@
 import packageJson from "../../package.json";
 
-export default function Version() {
-  const lastUpdated = import.meta.env.VITE_LAST_UPDATED;
+declare const __LAST_UPDATED__: string;
 
+export default function Version() {
   return (
     <p id="footer-meta" className="meta">
-      Version {" "}
+      Version{" "}
       <a
         href="https://github.com/Phoolis/paulcarlson.fi"
         target="_blank"
@@ -14,7 +14,7 @@ export default function Version() {
       >
         {packageJson.version}
       </a>{" "}
-      Last updated: {lastUpdated}
+      Last updated: {__LAST_UPDATED__ || "unknown"}
     </p>
   );
 }
