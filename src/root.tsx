@@ -1,4 +1,6 @@
+import "@radix-ui/themes/styles.css";
 import { Outlet, Scripts, ScrollRestoration } from "react-router";
+import { Theme, ThemePanel } from "@radix-ui/themes";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,9 +11,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <title>paulcarlson.fi</title>
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <Theme
+          appearance="dark"
+          accentColor="blue"
+          grayColor="sand"
+          radius="large"
+          scaling="110%"
+        >
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+          <ThemePanel />
+        </Theme>
       </body>
     </html>
   );
