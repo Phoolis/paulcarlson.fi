@@ -5,7 +5,7 @@ import { SectionTitle } from "./ui";
 
 export default function ConnectWithMe() {
   return (
-    <Section my="5">
+    <Section py="4">
       <SectionTitle>Connect with me</SectionTitle>
       <Flex gap="2">
         <Link

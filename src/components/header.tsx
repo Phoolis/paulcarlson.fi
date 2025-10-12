@@ -1,11 +1,12 @@
-import { Flex, Heading } from "@radix-ui/themes";
+import { Flex, Heading, Separator } from "@radix-ui/themes";
 
 export default function Header() {
   return (
-    <Flex justify="between" align="center" mb="6">
-      <Heading size="8">
+    <Flex direction="column">
+      <Heading size="8" align="left">
         Paul Carlson
       </Heading>
+      <Separator my="3" size="4" />
     </Flex>
   );
 }

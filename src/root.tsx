@@ -1,4 +1,5 @@
 import "@radix-ui/themes/styles.css";
+import "./styles.css";
 import { Outlet, Scripts, ScrollRestoration } from "react-router";
 import { Theme, ThemePanel } from "@radix-ui/themes";
 
