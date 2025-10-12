@@ -1,6 +1,10 @@
-import { Card, Flex, Section, Heading, Text } from "@radix-ui/themes";
+import { Card, Flex, Section, Heading, Text, Inset } from "@radix-ui/themes";
 import { SectionTitle } from "./ui";
 import { ScrollArea } from "@radix-ui/themes";
+import { BadgeList } from "./badgeList";
+import kamppisImg from "../assets/kamppis_screenshot_small.png";
+import tgImg from "../assets/ticketguru_screenshot_small.png";
+import rpgImg from "../assets/dnd_session_notes_sql_schema.png";
 
 export default function ProjectsSection() {
   const projects = [
@@ -9,25 +13,31 @@ export default function ProjectsSection() {
       description:
         "A roommate finder mobile app built with Kotlin and React Native.",
       link: "/projects/kamppis",
+      badges: ["full-stack", "mobile", "group"],
+      image: kamppisImg,
     },
     {
       title: "RPG Session Notes",
       description:
-        "A note-taking web app for tabletop RPGs build with Kotlin Ktor.",
+        "A note-taking web app for tabletop RPGs built with Java Spring Boot and Thymeleaf.",
       link: "/projects/rpg-notes",
+      badges: ["backend", "database"],
+      image: rpgImg,
     },
     {
       title: "TicketGuru",
-      description: "Full-stack web service for a ticket sales agency.",
+      description: "A Full-stack web service for a ticket sales agency.",
       link: "/projects/ticketguru",
+      badges: ["full-stack", "group"],
+      image: tgImg,
     },
   ];
 
   return (
     <Section py="4">
-      <SectionTitle>Projects</SectionTitle>
+      <SectionTitle>My Projects</SectionTitle>
 
-      <ScrollArea type="always" scrollbars="horizontal">
+      <ScrollArea type="auto" scrollbars="horizontal">
         <Flex gap="2">
           {projects.map((project) => (
             <Card
@@ -37,9 +47,22 @@ export default function ProjectsSection() {
               style={{ minWidth: "260px" }}
             >
               <a href={project.link}>
-                <Flex direction="column">
-                  <Heading>{project.title}</Heading>
-                  <Text>{project.description}</Text>
+                <Flex direction="column" justify="start" height="100%" gap="2">
+                  <Inset clip="padding-box" side="top" pb="current">
+                    <img
+                      src={project.image}
+                      alt={`Image of the ${project.title} project`}
+                      style={{
+                        width: "100%",
+                        height: 160,
+                        objectFit: "cover",
+                        borderRadius: "8px",
+                      }}
+                    />
+                  </Inset>
+                  <Heading mt="-4">{project.title}</Heading>
+                  <Text wrap="balance">{project.description}</Text>
+                  <BadgeList badges={project.badges} />
                 </Flex>
               </a>
             </Card>
