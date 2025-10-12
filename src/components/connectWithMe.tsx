@@ -1,5 +1,5 @@
 import { LinkedInLogoIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Flex, Link, Section, Text } from "@radix-ui/themes";
+import { Flex, Link, Section } from "@radix-ui/themes";
 import { SectionTitle } from "./ui";
 
 export default function ConnectWithMe() {

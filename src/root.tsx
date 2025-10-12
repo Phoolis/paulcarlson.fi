@@ -16,11 +16,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
           accentColor="blue"
           grayColor="sand"
           radius="large"
-          scaling="110%"
+          scaling="100%"
         >
           {children}
           <ScrollRestoration />
           <Scripts />
+          <ThemePanel />
         </Theme>
       </body>
     </html>

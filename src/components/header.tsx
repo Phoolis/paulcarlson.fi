@@ -4,7 +4,7 @@ import { Callout, Flex, Heading, Separator } from "@radix-ui/themes";
 export default function Header() {
   return (
     <Flex direction="column" mt="2">
-      <Flex justify="start" gap="6">
+      <Flex justify="between" gap="6">
         <Heading size="8" align="left">
           Paul Carlson
         </Heading>

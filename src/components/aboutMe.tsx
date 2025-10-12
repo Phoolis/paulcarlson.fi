@@ -1,5 +1,5 @@
 import paulImg from "../assets/its_me_paul.jpg";
-import { Text, Section, Link, Flex, AspectRatio, Box } from "@radix-ui/themes";
+import { Text, Section, Link, Flex, Box } from "@radix-ui/themes";
 import { RocketIcon } from "@radix-ui/react-icons";
 
 export default function AboutMeSection() {
