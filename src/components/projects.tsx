@@ -47,7 +47,12 @@ export default function ProjectsSection() {
               style={{ minWidth: "260px" }}
             >
               <a href={project.link}>
-                <Flex direction="column" justify="start" height="100%" gap="2">
+                <Flex
+                  direction="column"
+                  justify="between"
+                  height="100%"
+                  gap="2"
+                >
                   <Inset clip="padding-box" side="top" pb="current">
                     <img
                       src={project.image}

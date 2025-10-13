@@ -13,7 +13,8 @@ export default function Header() {
             <InfoCircledIcon />
           </Callout.Icon>
           <Callout.Text>
-            This site is currently under construction. Please check back later.
+            This site is under active development. Please check back later for
+            updates.
           </Callout.Text>
         </Callout.Root>
       </Flex>
