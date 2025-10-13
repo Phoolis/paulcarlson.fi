@@ -9,10 +9,10 @@ import rpgImg from "../assets/dnd_session_notes_sql_schema.png";
 export default function ProjectsSection() {
   const projects = [
     {
-      title: "Kamppis",
+      title: "Kämppis",
       description:
         "A roommate finder mobile app built with Kotlin and React Native.",
-      link: "/projects/kamppis",
+      link: "https://github.com/HH-Nat20",
       badges: ["full-stack", "mobile", "group"],
       image: kamppisImg,
     },
@@ -20,14 +20,14 @@ export default function ProjectsSection() {
       title: "RPG Session Notes",
       description:
         "A note-taking web app for tabletop RPGs built with Java Spring Boot and Thymeleaf.",
-      link: "/projects/rpg-notes",
+      link: "https://github.com/Phoolis/rgp-session-notes/tree/dev?tab=readme-ov-file",
       badges: ["backend", "database"],
       image: rpgImg,
     },
     {
       title: "TicketGuru",
       description: "A Full-stack web service for a ticket sales agency.",
-      link: "/projects/ticketguru",
+      link: "https://github.com/marttyyriroskis/nat20-ticketguru",
       badges: ["full-stack", "group"],
       image: tgImg,
     },

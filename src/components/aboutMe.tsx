@@ -48,16 +48,24 @@ export default function AboutMeSection() {
           justify="center"
           style={{ flex: "1 1 60%" }}
         >
-          <Text wrap="balance">
-            I’m a developer interested in backend, web development, and
-            everything DevOps. This site is a work in progress, but over time
-            I’ll add projects, experiments, and write-ups here.
+          <Text wrap="pretty" size="4" color="teal" highContrast>
+            I’m a prospective developer interested in backend, web development,
+            and everything DevOps. This site is a work in progress, but over
+            time I’ll add projects, experiments, and write-ups here.
           </Text>
-          <Text wrap="balance">
-            This will be my awe-inspiring and stupefyingly advanced website.
+          <Text wrap="pretty" size="3" highContrast>
+            With a background in biotechological research in cell biology in
+            Helsinki University, solving complex problems is what I live and
+            breathe for. I've now thrown myself into learning software
+            development in the Haaga-Helia University of Applied Sciences.
           </Text>
-          <Text wrap="balance">
-            Meanwhile, you can try a Finnish word-guessing game here:
+          <Text wrap="pretty" size="3" highContrast>
+            My friends call me approachable and friendly, and I do thrive in
+            collaborating with diverse teams and perspectives.
+          </Text>
+          <Text wrap="pretty" size="3" highContrast>
+            While the site is being developed you can amuse yourself by playing
+            a Finnish word-guessing game <em>à la</em> wordle here:
           </Text>
           <Flex align="center">
             <Link href="https://sanuli.paulcarlson.fi">
