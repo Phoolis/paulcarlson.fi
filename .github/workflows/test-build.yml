@@ -1,0 +1,43 @@
+name: Test Build
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "**/README.md"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Set up node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 22
+
+      - name: Get last commit date
+        run: |
+          LAST_UPDATED=$(git log -1 --format=%cd --date=short)
+          echo "VITE_LAST_UPDATED=$LAST_UPDATED" >> $GITHUB_ENV
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          VITE_LAST_UPDATED: ${{ env.VITE_LAST_UPDATED }}
+
+      - name: Verify build footer date
+        run: |
+          echo "Checking footer content:"
+          if ! grep -ERq "Last updated: <!-- -->[0-9]{4}-[0-9]{2}-[0-9]{2}" build/; then
+            echo "❌ Last updated date not found in build output!"
+            exit 1
+          else
+            echo "✅ Last updated date found in footer."
+          fi
