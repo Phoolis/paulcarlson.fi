@@ -9,9 +9,12 @@ git pull origin main
 LAST_UPDATED=$(git log -1 --format=%cd --date=short)
 echo "Last updated: $LAST_UPDATED"
 
+# Export variable so Docker build can see it
+export VITE_LAST_UPDATED=$LAST_UPDATED
+
 # --- Build and redeploy ---
 echo "Building Docker image..."
-LAST_UPDATED="$LAST_UPDATED" docker compose build
+docker compose build --build-arg LAST_UPDATED="$LAST_UPDATED"
 
 echo "Starting container..."
 docker compose up -d

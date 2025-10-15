@@ -8,14 +8,14 @@ COPY ./package.json package-lock.json /app/
 WORKDIR /app
 RUN npm ci --omit=dev
 
-# Inject build date from ARG → ENV
-ARG LAST_UPDATED
-ENV VITE_LAST_UPDATED=${LAST_UPDATED}
 
 FROM node:20-alpine AS build-env
 COPY . /app/
 COPY --from=development-dependencies-env /app/node_modules /app/node_modules
 WORKDIR /app
+# Inject build date from ARG → ENV
+ARG LAST_UPDATED
+ENV VITE_LAST_UPDATED=${LAST_UPDATED}
 RUN npm run build
 
 # Serve with nginx
