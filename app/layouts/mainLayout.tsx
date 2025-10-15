@@ -44,6 +44,8 @@ export default function MainLayout({
           }}
         >
           <Box
+            pl="2"
+            pr="2"
             style={{
               display: "flex",
               flexDirection: "column",
