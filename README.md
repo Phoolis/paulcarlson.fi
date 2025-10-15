@@ -1,3 +1,21 @@
+# Paul Carlson's homepage
+
+The git-repository for my personal website: https://paulcarlson.fi. Work in progress.
+
+> [!NOTE]
+> Redoing the website using vite + react. Automated deployment to server is disabled for now.
+
+---
+
+## Technologies used
+
+- [React router](https://reactrouter.com/home)
+  - v7 for the new framework features and pre-rendering of static pages
+- [Vite](https://vite.dev/guide/)
+  - build tool for faster development
+- [Radix ui](https://www.radix-ui.com/)
+  - Theming and styling
+
 # Welcome to React Router!
 
 A modern, production-ready template for building full-stack React applications using React Router.
