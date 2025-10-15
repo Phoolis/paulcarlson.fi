@@ -6,8 +6,8 @@ import MainLayout from "~/layouts/mainLayout";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Paul Carlson's homepage" },
+    { name: "description", content: "Welcome my personal website!" },
   ];
 }
 

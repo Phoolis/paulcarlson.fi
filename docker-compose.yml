@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        LAST_UPDATED: ${LAST_UPDATED}
+      dockerfile: Dockerfile
+    container_name: paulcarlson.fi
+    ports:
+      - "80:80"
+    restart: unless-stopped
