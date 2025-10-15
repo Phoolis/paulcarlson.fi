@@ -10,7 +10,7 @@ import {
 import type { Route } from "./+types/root";
 import "@radix-ui/themes/styles.css";
 import "./app.css";
-import { Theme, ThemePanel } from "@radix-ui/themes";
+import { Theme } from "@radix-ui/themes";
 import BackgroundWrapper from "./components/backgroundWrapper";
 
 export const links: Route.LinksFunction = () => [
@@ -51,7 +51,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
             {children}
             <ScrollRestoration />
             <Scripts />
-            <ThemePanel />
+            {/* <ThemePanel /> */}
           </BackgroundWrapper>
         </Theme>
       </body>
