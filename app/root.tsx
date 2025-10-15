@@ -8,7 +8,10 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import "@radix-ui/themes/styles.css";
 import "./app.css";
+import { Theme, ThemePanel } from "@radix-ui/themes";
+import BackgroundWrapper from "./components/backgroundWrapper";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -32,10 +35,25 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+      <body
+        style={{
+          margin: 0,
+          padding: 0,
+        }} // Important! Radix theme adds margin/padding and introduces an unnecessary scrollbar on an empty page
+      >
+        <Theme
+          accentColor="sky"
+          panelBackground="solid"
+          radius="small"
+          scaling="105%"
+        >
+          <BackgroundWrapper>
+            {children}
+            <ScrollRestoration />
+            <Scripts />
+            <ThemePanel />
+          </BackgroundWrapper>
+        </Theme>
       </body>
     </html>
   );
