@@ -42,6 +42,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         }} // Important! Radix theme adds margin/padding and introduces an unnecessary scrollbar on an empty page
       >
         <Theme
+          appearance="dark" // Default to dark mode
           accentColor="sky"
           panelBackground="solid"
           radius="small"
