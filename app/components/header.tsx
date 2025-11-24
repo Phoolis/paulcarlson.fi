@@ -1,13 +1,16 @@
 import { InfoCircledIcon } from "@radix-ui/react-icons";
-import { Callout, Flex, Heading, Separator } from "@radix-ui/themes";
+import { Link, Callout, Flex, Heading, Separator } from "@radix-ui/themes";
+import {  NavLink } from "react-router";
 
 export default function Header() {
   return (
     <Flex direction="column">
       <Flex justify="between" gap="6" p="2">
-        <Heading size="8" align="left">
-          Paul Carlson
-        </Heading>
+        <Link href="/">
+          <Heading size="8" align="left">
+            Paul Carlson
+          </Heading>
+        </Link>
         <Callout.Root color="yellow" size="1">
           <Callout.Icon>
             <InfoCircledIcon />
