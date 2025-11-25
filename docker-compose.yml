@@ -7,5 +7,5 @@ services:
       dockerfile: Dockerfile
     container_name: paulcarlson.fi
     ports:
-      - "8080:80" #host:container
+      - "127.0.0.1:8008:80" #host:container
     restart: unless-stopped
