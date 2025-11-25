@@ -2,11 +2,16 @@ import { useParams } from "react-router";
 
 import TicketguruPage from "./ticketguruPage";
 import MainLayout from "~/layouts/mainLayout";
+import ProjectsSection from "~/components/projects";
+import TaskManagePage from "./taskmanagePage";
+import KamppisPage from "./kamppisPage";
+import RpgSessionNotesPage from "./rpgsessionnotesPage";
 
 const componentMap: Record<string, React.ComponentType> = {
-  //kamppis: KamppisPage,
-  //"rpg-session-notes": RpgSessionNotesPage,
+  kamppis: KamppisPage,
+  "rpg-session-notes": RpgSessionNotesPage,
   ticketguru: TicketguruPage,
+  taskmanage: TaskManagePage,
 };
 
 export default function ProjectRouter() {
@@ -19,6 +24,7 @@ export default function ProjectRouter() {
   return (
     <MainLayout>
       <Component />
+      <ProjectsSection />
     </MainLayout>
   );
 }

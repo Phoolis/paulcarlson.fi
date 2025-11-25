@@ -11,6 +11,7 @@ const badgeColorMap = {
   mobile: "crimson",
   group: "gray",
   "full-stack": "blue",
+  devops: "lime",
 } as const;
 
 const badgeTooltipText = {
@@ -22,6 +23,7 @@ const badgeTooltipText = {
   group: "Project required working as a team.",
   "full-stack":
     "Project had substantial work on frontend, backend, and database.",
+  devops: "Project supports continuous development and deployment workflows.",
 } as const;
 
 export function BadgeList({ badges }: BadgeListProps) {
