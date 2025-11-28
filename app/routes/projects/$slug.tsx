@@ -6,6 +6,8 @@ import ProjectsSection from "~/components/projects";
 import TaskManagePage from "./taskmanagePage";
 import KamppisPage from "./kamppisPage";
 import RpgSessionNotesPage from "./rpgsessionnotesPage";
+import type { Route } from "./+types/$slug";
+import { projects } from "~/data/projects";
 
 const componentMap: Record<string, React.ComponentType> = {
   kamppis: KamppisPage,
@@ -14,9 +16,28 @@ const componentMap: Record<string, React.ComponentType> = {
   taskmanage: TaskManagePage,
 };
 
+export function meta({}: Route.MetaArgs) {
+  const { slug } = useParams();
+  const project = projects.find((p) => p.slug === slug);
+
+  if (!project) {
+    return [
+      { title: "Project Not Found" },
+      {
+        name: "description",
+        content: "Requested project page could not be found.",
+      },
+    ];
+  }
+
+  return [
+    { title: `${project.title} - Paul Carlson` },
+    { name: "description", content: project.description },
+  ];
+}
+
 export default function ProjectRouter() {
   const { slug } = useParams();
-
   const Component = componentMap[slug ?? ""];
 
   if (!Component) return <h1>404 - Project Not Found</h1>;
