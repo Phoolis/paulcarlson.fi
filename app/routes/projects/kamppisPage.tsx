@@ -45,6 +45,9 @@ export default function KamppisPage() {
         <Heading mt="-4">{project.title}</Heading>
         <Text wrap="balance">{project.description}</Text>
         <BadgeList badges={project.badges} />
+        <Text wrap="pretty" size="3" highContrast>
+          Team: Janne Airaksinen, Paul Carlson, Jesse Hellman & Julia Hämäläinen
+        </Text>
       </Box>
       <Flex
         p="2"
