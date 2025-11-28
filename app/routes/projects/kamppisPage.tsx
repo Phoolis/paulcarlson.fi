@@ -54,7 +54,53 @@ export default function KamppisPage() {
         style={{ flex: "1 1 60%" }}
       >
         <Text wrap="pretty" size="3" highContrast>
-          To be continued...
+          Kämppis is a mobile application designed to connect people looking for
+          roommates or shared apartment rooms. The project was developed as part
+          of the Software Project 2 course at Haaga-Helia University of Applied
+          Sciences. The purpose of Kämppis is to have a positive impact on its
+          users’ lives. According to the Finnish Red Cross’s loneliness
+          barometer, one-third of young people aged 15–24 feel lonely on a
+          monthly basis. At the same time, rising living costs, inflation, and
+          planned changes to student housing benefits make shared living an
+          increasingly attractive financial option.
+        </Text>
+        <Text wrap="pretty" size="3" highContrast>
+          Kämppis responds to these challenges by offering a platform that helps
+          people interested in shared housing find compatible roommates. Kämppis
+          works by allowing users to create a personal profile in the app.
+          Currently, logging in is done through a GitHub account. Once logged
+          in, users can edit their profile, set roommate and room preferences,
+          and choose whether they are looking for a roommate for a new shared
+          apartment, an empty room in an existing shared apartment, or a new
+          roommate for a room they already have available.
+        </Text>
+        <Text wrap="pretty" size="3" highContrast>
+          Users can browse other profiles based on their preferences, such as
+          age, gender, location, number of current roommates, or rent. By
+          swiping right, a user can show interest in a roommate or room profile;
+          swiping left skips it. When two users swipe right on each other—or
+          when a user shows interest in a room whose creator has also shown
+          interest in them—a chat window opens, allowing them to get to know
+          each other. The app itself does not handle practical aspects of
+          finding housing; it simply facilitates connections and conversations.
+        </Text>
+        <Text wrap="pretty" size="3" highContrast>
+          Version 1.0 of Kämppis represents the Minimum Viable Product (MVP). It
+          includes the core features required for users to create profiles,
+          search for suitable roommates, and start conversations. Users can
+          create detailed profiles with personal information such as age,
+          gender, lifestyle, interests, location, and pets, along with photos.
+          They can also create a housing profile and add room profiles for any
+          available rooms, inviting current roommates to join the app so that
+          all household members are visible.
+        </Text>
+        <Text wrap="pretty" size="3" highContrast>
+          Search criteria let users filter potential matches, and browsing
+          displays a concise summary of each profile. More detailed profiles are
+          available upon selection. If two users express mutual interest, the
+          app creates a connection and enables chat. Group chats are supported
+          when matching involves a shared apartment with multiple residents.
+          Users can end chats at any time.
         </Text>
         {/* <Flex justify="center">
           <Link
@@ -71,7 +117,7 @@ export default function KamppisPage() {
           </Link>
         </Flex> */}
         <Text wrap="pretty" size="2" highContrast align="center">
-          See the GitHub pages for more info for now
+          See the GitHub pages for more info on Kämppis
         </Text>
         <Flex justify="center">
           <Link
